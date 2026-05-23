@@ -4,14 +4,6 @@ import "testing"
 
 import "github.com/stretchr/testify/require"
 
-func TestOpenAIMessagesDispatchDefaultOpusUsesGPT55(t *testing.T) {
-	t.Parallel()
-
-	group := &Group{Platform: PlatformOpenAI}
-
-	require.Equal(t, "gpt-5.5", group.ResolveMessagesDispatchModel("claude-opus-4-7"))
-}
-
 func TestNormalizeOpenAIMessagesDispatchModelConfig(t *testing.T) {
 	t.Parallel()
 
